@@ -2,6 +2,6 @@ $('#buttonsearch').click(function(){
 				$('#formsearch').slideToggle( "fast",function(){
 					 $( '#content' ).toggleClass( "moremargin" );
 				} );
-				$('#searchbox').focus()
+				$('#searchbox').focus();
 				$('.openclosesearch').toggle();
 		});
