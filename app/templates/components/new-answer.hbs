@@ -1,0 +1,10 @@
+<form>
+  <label for="actualAnswer">Whats your answer</label>
+  {{input value=actualAnswer id="actualAnswer"}}
+  <label for="author">Who are you?</label>
+  {{input value=author id="author"}}
+  <button {{action 'saveNewAnswer'}}>Answer!</button>
+</form>
+
+
+{{yield}}
