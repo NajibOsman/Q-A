@@ -1,0 +1,12 @@
+<form>
+  <label for="Question">Post your question?</label>
+  {{input value=Question id="Question"}}
+  <label for="author">Your Name</label>
+  {{input value=author id="author"}}
+  <label for="category">category</label>
+  {{input value=category id="category"}}
+  <button {{action "newQuestion"}}>Submit</button>
+</form>
+
+
+{{yield}}
