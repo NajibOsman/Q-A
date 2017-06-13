@@ -1,0 +1,28 @@
+<p>
+  <h2>{{model.Quiz}}</h2> by {{model.author}}</p>
+<br>
+<p>category</p>
+<p>{{model.category}}</p>
+<br>
+
+
+<h2>Answers</h2>
+<ul>
+  {{#each model.answers as |answer|}}
+    {{answer-tile answer=answer}}
+  {{/each}}
+</ul>
+
+<br>
+<br>
+<h3>Post an answer below!</h3>
+<!-- {{answer-detail question=model answers="answers"}} -->
+{{new-answer question=model saveNewAnswer="saveNewAnswer"}}
+
+{{#link-to 'index'}}
+  Home
+{{/link-to}}
+
+
+
+{{outlet}}
