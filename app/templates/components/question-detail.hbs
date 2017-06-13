@@ -1,5 +1,10 @@
-{{#link-to 'question' question.id question="question" saveNewAnswer="saveNewAnswer" answers="answers"}}
-{{question.actualQuestion}} by  {{question.author}}
+<!-- {{#link-to 'question' question.id question=question saveNewAnswer="saveNewAnswer" answers="answers"}}
+{{question.question}} by  {{question.author}}
+{{/link-to}}
+
+{{yield}} -->
+{{#link-to 'question' question.id}}
+  {{question.question}} by  {{question.author}}
 {{/link-to}}
 
 {{yield}}

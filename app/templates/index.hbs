@@ -4,5 +4,15 @@
   </div>
 </div>
 
+<h1>Welcome to the Ask Me!</h1>
+<h3>Here you can view questions posted by other Ask me users</h3>
+
+{{new-question saveNewQuestion="saveNewQuestion"}}
+
+<p>Click on the questions to answer or View answers.</p>
+{{#each model.questions as |quiz|}}
+{{question-detail question=quiz}}
+<hr>
+{{/each}}
 
 {{outlet}}
