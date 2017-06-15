@@ -1,7 +1,13 @@
 import Ember from 'ember';
 
 export default Ember.Component.extend({
+   addNewAnswer: false,
   actions:{
+//Display a new form when the add the new answer action is clicked
+    answerFormShow() {
+      this.set('addNewAnswer', true);
+
+    //save answer to firebase
     saveNewAnswer: function () {
       var params ={
         actualAnswer:this.get('actualAnswer'),
@@ -9,8 +15,9 @@ export default Ember.Component.extend({
         voteCount: 0,
         question: this.get('question')
       };
-      
-      this.sendAction('saveNewAnswer',params)
+
+      this.set('addnewAnswer', false);
+      this.sendAction('saveNewAnswer',params);
     }
   }
 
