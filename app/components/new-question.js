@@ -2,14 +2,15 @@ import Ember from 'ember';
 
 export default Ember.Component.extend({
   actions:{
-    newQuestion:(function () {
+    newQuestion(){
       var params = {
-        Question: this.get('Question'),
+        question: this.get('question'),
         author: this.get('author'),
         category: this.get('category')
-      }
-      this.sendAction('saveNewQuestion',params)
-    })
+      };
+      this.sendAction('saveNewQuestion',params);
+      console.log(params);
+    }
   }
 
 });

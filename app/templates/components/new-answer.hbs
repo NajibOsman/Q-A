@@ -1,10 +1,14 @@
+{{#if addNewAnswer}}
 <form>
-  <label for="actualAnswer">Whats your answer</label>
-  {{input value=actualAnswer id="actualAnswer"}}
-  <label for="author">Who are you?</label>
+  <label for="answer">Your answer</label>
+  {{input value=answer id="answer"}}
+  <label for="author"> Your name?</label>
   {{input value=author id="author"}}
   <button {{action 'saveNewAnswer'}}>Answer</button>
 </form>
+{{else}}
+<button class='btn btn-success' {{action 'answerFormShow'}}>New Answer</button>
+{{/if}}
 
 
 {{yield}}

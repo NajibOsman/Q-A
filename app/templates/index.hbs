@@ -10,9 +10,11 @@
 {{new-question saveNewQuestion="saveNewQuestion"}}
 
 <p>Click on the questions to answer or View answers.</p>
-{{#each model.questions as |quiz|}}
-{{question-detail question=quiz}}
-<hr>
+
+{{#each model.questions as |item|}}
+	{{!--question.question}}     {{question.author}}     {{question.category--}}
+	{{question-tile question=item}}
+	<hr>
 {{/each}}
 
 {{outlet}}

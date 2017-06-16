@@ -1,27 +1,27 @@
-<p>
-  <h2>{{model.quiz.question}}</h2> by {{model.quiz.author}}</p>
-<br>
-<p>Category:{{model.quiz.category}}</p>
-<br>
-
-
-<h2>Answers</h2>
-<ul>
-  {{#each model.answers as |answer|}}
-    {{answer-tile answer=answer}}
-  {{/each}}
-</ul>
-
-<br>
-<br>
-<h3>Post an answer below!</h3>
-<!-- {{answer-detail question=model answers="answers"}} -->
-{{new-answer question=model saveNewAnswer="saveNewAnswer"}}
-
 {{#link-to 'index'}}
   Home
 {{/link-to}}
 
+<p>
+  Question:  {{model.question.question}} </p>
+  <p>Author: {{model.question.author}}</p>
+<p>Category: {{model.question.category}}</p>
+<br>
+
+<h2>Post an answer below</h2>
+<!-- {{answer-detail question=model answers="answers"}} -->
+{{new-answer mycurrentquestion=model.question saveNewAnswer="saveNewAnswer"}}
+<br>
+
+<h3>Answers</h3>
+<ul>
+  {{#each model.question.answers as |answer|}}
+    {{answer-tile answer=answer}}
+  {{/each}}
+</ul>
+
+
+<br>
 
 
 {{outlet}}
